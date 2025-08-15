@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Practise 5</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function myFunction(){
+            console.log('Welcome to Apna College');
+            console.log('We are learning JS!!');
+    }
+
+    myFunction(); //invoking a function or calling a function
+    //To minismise redundancy in coding, we use a function
+
+    function newFunction(msg){ //parameter->input
+        console.log(msg);
+    }
+
+    newFunction("I love JS");//argument
+
+    function sum(x,y){
+        console.log("Before return");
+        summ=x+y;
+        return summ;
+        console.log("After return"); //unreachable code
+    }
+    sum(2,6);
+    console.log(summ);
+
+    //functions can be stored in a variable in js:
+    const arrowSum= (a,b)=>{
+        console.log(a+b);
+    };
+    console.log(arrowSum); //part of modern JS
+
+
+    //callback function  //forEach does the job of calling the function
+    let arr=[1,2,3,4,5];
+    arr.forEach(function printVal(val)){
+        console.log(val);
+    }
+    
+</script>
+</html>

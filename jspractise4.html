@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Practise 4</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //when same type of information is to be stored within one variable=array
+    //FOR LOOP:
+    let colors=["pink","blue", "green", "yellow", "black","red","orange"];
+    
+    for(idx=0;idx<colors.length;idx++){
+        console.log(colors[idx]);
+    }
+
+    //FOR OF LOOP:
+    for(let color of colors){
+        console.log(color.toUpperCase());
+    }
+
+    let items=[300,400,500,600,700,800];
+
+    let idx=0;
+    for(let val of items){
+        console.log('Value at ${idx}=,${val}');
+        let offer=val/10;
+        items[i]=items[i]-offer;
+        console.log("Items after offer: ${items}");
+        idx++;
+    }
+
+    for(i=0;i<items.length;i++){
+
+    }
+</script>
+</html>

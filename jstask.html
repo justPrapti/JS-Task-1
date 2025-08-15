@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript task</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    //1.Variables, Operators, and Conditionals:
+        birthYear=prompt("Enter your birth year:");
+        if (birthYear>=1965) {
+    console.log("Senior citizen.");
+    } 
+    else if (birthYear>=2006) {
+    console.log("Can vote.");
+    } 
+    else {
+    console.log("Cano vote.");
+    }
+
+//////////////////////////////////////////////////////////////////////////////
+    //2. Loops and Arrays:
+    a=[85,97,83,12,34,90,100]
+    sum=0;
+    for(i=0;i<a.length;i++){
+        sum=sum+a[i];
+    }
+    let avg=sum/10;
+    console.log("Sum:",sum);
+    console.log("Average:",avg);
+//////////////////////////////////////////////////////////////////////////////
+    //3.Strings and String Operations:
+    
+   
+    //Reverse:
+    let stri="Prapti Kambli";
+    let stri2 = stri.split("").reverse().join("");
+    console.log("Reverse string:",stri2);
+
+    //Palindrome:
+    str=prompt("Enter a string");
+    let n=str.length;
+    var c;
+     for(i=0;i<=n/2;i++)
+    {
+        if(str[i]==str[n-1-i]){
+            c=true;
+        }
+        else{
+            c=false;
+        }
+    }
+    console.log("Is it a palindrome?:",c);
+
+    //Vowels:
+    s=prompt("Enter a string:");
+    let v=0;
+    for(i=0;i<s.length;i++){
+        if(s.charAt(s[i]=="a"|| s[i]=="e"|| s[i]=="i"|| s[i]=="o" || s[i]=="u"|| s[i]=="A"|| s[i]=="E"|| s[i]=="I"|| s[i]=="O"|| s[i]=="U")){
+            v++;
+        }
+    }
+    if(v>0){
+        console.log("Vowels are present.");
+    }
+    else{
+        console.log("No vowels present in the string:",s);
+    }
+//////////////////////////////////////////////////////////////////////////////
+    //4.Functions and Methods:
+    var word = "";
+    var long = "";
+   function lSentence(sent) {
+    
+
+    for (var i = 0; i <= sent.length; i++) {
+
+        if (i == sent.length || sent[i] == " ") {
+            if (word.length > long.length) {
+                long = word;
+            }
+            word = "";
+        } else {
+            word = word + sent[i];
+        }
+    }
+
+    return long;
+}
+
+let sent=prompt("Enter a sentence");
+lSentence(sent);
+console.log("Longest word:",long);
+//////////////////////////////////////////////////////////////////////////////
+//5.Putting It All Together
+var todo = [];
+
+function addItem(item) {
+    todo.push(item);
+}
+
+for (var i = 0; i < 5; i++) {
+    var item = prompt(`To do (${i}):`);
+    addItem(item);
+    console.log("To do list now:", todo);
+}
+
+function displayItems() {
+    if (todo.length == 0) {
+        alert("No to-do items to display");
+    } else {
+        console.log("To-do list:", todo);
+    }
+}
+
+function removeItem(index) {
+    if (index >= 0 && index < todo.length) {
+        todo.splice(index, 1); // ✅ fixed array name
+        alert("Item removed.");
+    } else {
+        alert("Invalid index.");
+    }
+}
+
+var action = prompt("Choose an action: add, remove, display, quit").toLowerCase();
+
+if (action === "add") {
+    var newItem = prompt("Enter the new to-do item:");
+    addItem(newItem);
+} 
+else if (action === "remove") {
+    var index = parseInt(prompt("Enter the index of the item to remove:"));
+    removeItem(index);
+} 
+else if (action === "display") {
+    displayItems();
+} 
+else if (action === "quit") {
+    alert("Exiting program. Goodbye!");
+} 
+else {
+    alert("Invalid action. Please try again.");
+}
+</script>
+
+</html>
