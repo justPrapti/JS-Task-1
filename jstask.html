@@ -127,24 +127,24 @@ function removeItem(index) {
     }
 }
 
-var action = prompt("Choose an action: add, remove, display, quit").toLowerCase();
+var action = prompt("Choose an action: 1-to add, 2-to remove, 3-todisplay, 4-exit").toLowerCase();
 
-if (action === "add") {
+if (action === 1) {
     var newItem = prompt("Enter the new to-do item:");
     addItem(newItem);
 } 
-else if (action === "remove") {
+else if (action === 2) {
     var index = parseInt(prompt("Enter the index of the item to remove:"));
     removeItem(index);
 } 
-else if (action === "display") {
+else if (action === 3) {
     displayItems();
 } 
-else if (action === "quit") {
-    alert("Exiting program. Goodbye!");
+else if (action === 4) {
+    alert("Exiting program");
 } 
 else {
-    alert("Invalid action. Please try again.");
+    alert("INVALID");
 }
 </script>
 
