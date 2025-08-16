@@ -83,8 +83,9 @@
         if (i == sent.length || sent[i] == " ") {
             if (word.length > long.length) {
                 long = word;
+              word = "";
             }
-            word = "";
+            
         } else {
             word = word + sent[i];
         }
